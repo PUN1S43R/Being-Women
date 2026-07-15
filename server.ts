@@ -4,7 +4,6 @@ import cors from 'cors';
 import { createServer as createViteServer } from 'vite';
 import dotenv from 'dotenv';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import multer from 'multer';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
@@ -17,8 +16,7 @@ import crypto from 'crypto';
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 // Initialize DB
 initDb();
